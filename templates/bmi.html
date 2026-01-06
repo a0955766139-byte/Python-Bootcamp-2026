@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI 計算機</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        input { padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #218838; }
+        .result { margin-top: 20px; font-size: 1.2em; color: #333; }
+    </style>
+</head>
+<body>
+    <h1>💪 健康管家 BMI 計算機</h1>
+    
+    <form action="/calculate" method="POST">
+        <input type="text" name="height" placeholder="身高 (cm)" required>
+        <br>
+        <input type="text" name="weight" placeholder="體重 (kg)" required>
+        <br><br>
+        <button type="submit">開始計算</button>
+    </form>
+
+    {% if bmi_result %}
+    <div class="result">
+        <p>你的 BMI 指數：<strong>{{ bmi_result }}</strong></p>
+    </div>
+    {% endif %}
+</body>
+</html>
