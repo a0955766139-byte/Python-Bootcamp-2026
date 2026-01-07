@@ -14,7 +14,7 @@ with st.expander("🔔 今日提醒 (點擊展開)", expanded=True):
     st.info("API 已連線成功，可以開始使用六大主功能。")
     st.write("🌟 今日宇訊息 : 相信你的直覺，財富正在靠近!")
 
-st.diveider() #畫一條分隔線
+st.divider() #畫一條分隔線
 
 # --- 4. 核心功能區(使用Columns 做 2x3 的網格排版) ---
 # 建立兩欄 (col1, col2)
