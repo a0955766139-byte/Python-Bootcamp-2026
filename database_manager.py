@@ -18,7 +18,7 @@ def check_and_create_table():
     conn.close()
 
 #2.存日記
-def save_diray_entry(user_content, user_modd):
+def save_diray_entry(user_content, user_mood):
     check_and_create_table() #存之前，先檢查
 
     conn = sqlite3.connect(DB_NAME)
